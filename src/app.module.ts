@@ -8,17 +8,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
-    // TypeOrmModule.forRoot({
-    //   type: 'mysql',
-    //   host: 'localhost',
-    //   port: 3306,
-    //   username: 'root',
-    //   password: 'itscope@2024',
-    //   database: 'nextjs_typeorm_quiz_db',
-    //   entities: [Cat],
-    //   synchronize: true,
-    // }),
-    // CatsModule,
     ConfigModule.forRoot(), // Load .env file
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
